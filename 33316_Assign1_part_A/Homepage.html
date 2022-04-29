@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="Homepage.css">
+	<title>Admin Dashboard</title>
+</head>
+<body>
+	<div class="sidebar">
+		<div class="sidebar-brand">
+			<h2><span class="bi bi-hospital"></span><i class="fa fa-ambulance"></i> Clinic Management</h2>
+		</div>
+
+		<div class="sidebar-menu">
+			<ul>
+				<li>
+					<a href="" class="active"><span class="las la-igloo"></span>
+						<span>Dashboard</span>
+					</a></li>
+
+					<li>
+					<a href=""><span class="las la-users"></span>
+						<span>Commitments</span>
+					</a></li>
+
+					<li>
+					<a href=""><span class="las la-clipboard-list"></span>
+						<span>Schedule</span>
+					</a></li>
+
+					<li>
+					<a href=""><span class="las la-bars"></span>
+						<span>Visits</span>
+					</a></li>
+          <li>
+					<a href=""><span class="las la-user-circle"></span>
+						<span>Connect Google Calendar</span>
+					</a></li>
+					<li>
+					<a href=""><span class="las la-receipt"></span>
+						<span>..</span>
+					</a></li>
+
+					
+			</ul>
+		</div>
+	</div>
+	<div class="main-content">
+		<header id="head1" class="nav-down">
+			<h2 id="tra">
+				<label for="">
+					<span class="fa fa-stethoscope"></span>
+				</label>
+
+				 HELLO DOCTOR!
+			</h2>
+
+			<div class="search-wrapper">
+				<span class="las la-search"></span>
+				<input type="search" placeholder="Search here" />
+			</div>
+
+			<div class="user-wrapper" class="nav-down">
+				<img src="profile.jpg" width="30px" height="30px" alt="">
+			<div >
+                <h4>Demo Demo</h4>
+                <small>Physician</small>
+            </div>
+			</div>
+		</header>
+		<main>
+		     <div class="cards">
+		     	<div id="div1" class="card-single">
+		     		<div>
+		     			<h1>270</h1>
+		     			<span>Appointments For You</span>
+		     		</div>
+		     		<div>
+		     			<span class="las la-users"></span>
+		     		</div>
+		     	</div>
+
+		     	<div id="div2" class="card-single">
+		     		<div>
+		     			<h1>18</h1>
+		     			<span>Today's Appointments</span>
+		     		</div>
+		     		<div>
+		     			<span class="las la-clipboard"></span>
+		     		</div>
+		     	</div>
+
+		     	<div id="div3" class="card-single">
+		     		<div>
+		     			<h1>200</h1>
+		     			<span>Your Patient Discharged</span>
+		     		</div>
+		     		<div>
+		     			<span class="fa fa-heartbeat"></span>
+		     		</div>
+		     	</div>
+
+		     	
+		    </div>
+		    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+   <canvas id="myChart" style="width:100%;max-width:900px; padding: 10%; margin: 10px; "></canvas>
+<script>
+var xValues = ["Week1", "Week2", "Week3", "Week4", "Week4"];
+var yValues = [130, 150, 160, 140, 155];
+var barColors = ["lightblue", "lightgreen","lightorange","purple","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Patients Attended"
+    }
+  }
+});
+
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col col-sm-3 col-xs-12">
+                            <h4 class="title">Appointments For You</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>Full Name</th>
+                                <th>Age</th>
+                                <th>Number</th>
+                                <th>City</th>
+                                <th>Disease</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Vincent Williamson</td>
+                                <td>31</td>
+                                <td>1234567689</td>
+                                <td>Delhi</td>
+                                <td>Dengue</td>
+                                <td>21/3/2022</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Taylor Reyes</td>
+                                <td>22</td>
+                                <td>1234567689</td>
+                                <td>Delhi</td>
+                                <td>Dengue</td>
+                                <td>21/3/2022</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Justin Block</td>
+                                <td>26</td>
+                                <td>1234567689</td>
+                                <td>Delhi</td>
+                                <td>Dengue</td>
+                                <td>21/3/2022</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Sean Guzman</td>
+                                <td>26</td>
+                                <td>1234567689</td>
+                                <td>Delhi</td>
+                                <td>Dengue</td>
+                                <td>21/3/2022</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Keith Carter</td>
+                                <td>20</td>
+                                <td>1234567689</td>
+                                <td>Delhi</td>
+                                <td>Dengue</td>
+                                <td>21/3/2022</td>i
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+        </div>
+    </div>
+</div>
+<style type="text/css">
+</style>
+		</main>
+	</div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
